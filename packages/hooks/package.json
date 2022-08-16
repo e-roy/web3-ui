@@ -40,6 +40,7 @@
   "types": "./dist/index.d.ts",
   "dependencies": {
     "@babel/runtime": "^7.16.7",
+    "alchemy-sdk": "^2.0.2",
     "ankr-react": "^0.2.1",
     "wagmi": "^0.5.5"
   },

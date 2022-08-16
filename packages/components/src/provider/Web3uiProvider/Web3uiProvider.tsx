@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Provider as AnkrProvider } from 'ankr-react';
 // TODO: HooksProvider is not working on build for storybook or docs on vercel
 // import { HooksProvider } from '@web3-ui/hooks';
+// import { AlchemyProvider } from './';
+// import { AlchemyProvider } from '@web3-ui/hooks';
+// import { Alchemy } from 'alchemy-sdk';
+// const alchemy = new Alchemy();
+
 import { CSS, getCssText, createTheme } from '../../theme/stitches.config';
 
 export interface IWeb3uiProviderProps {
@@ -55,6 +60,7 @@ export const Web3uiProvider = ({
   // TODO dangerous set innerHTML is set for ssr.  need to test this. https://stitches.dev/docs/server-side-rendering
   return (
     <AnkrProvider>
+      {/* <AlchemyProvider> */}
       <div {...createThemeRootProps(id)} className={currentTheme}>
         <style
           id="stitches"
@@ -64,6 +70,7 @@ export const Web3uiProvider = ({
         />
         {children}
       </div>
+      {/* </AlchemyProvider> */}
     </AnkrProvider>
   );
 };
